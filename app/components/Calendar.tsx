@@ -267,7 +267,9 @@ const Calendar = () => {
           <DialogHeader>
             <DialogTitle>Delete Booking</DialogTitle>
             {selectedBooking && (
-              <p>Are you sure you want to delete "{selectedBooking.title}"?</p>
+              <p>
+                Are you sure you want to delete {`"${selectedBooking.title}"`}?
+              </p>
             )}
             <div className="flex justify-end gap-2 mt-4">
               <button
