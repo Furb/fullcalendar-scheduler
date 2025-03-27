@@ -90,6 +90,7 @@ const Calendar = () => {
     <>
       <div>
         <FullCalendar
+          locale="en-GB"
           height="auto"
           plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
           initialView="timeGridWeek"
@@ -105,6 +106,13 @@ const Calendar = () => {
           }}
           slotMinTime="07:00:00"
           slotMaxTime="24:00:00"
+          firstDay={1}
+          dayHeaderFormat={{
+            weekday: "short",
+            day: "numeric",
+            month: "numeric",
+            omitCommas: true,
+          }}
           weekends={true}
           allDaySlot={false}
           select={handleDateClick}
