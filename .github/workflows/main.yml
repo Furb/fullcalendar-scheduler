@@ -1,0 +1,18 @@
+# .github/workflows/ping_supabase.yml
+name: Ping Supabase to keep active
+
+on:
+  schedule:
+    # Runs every Monday and Thursday at 10:00
+    - cron: "0 10 * * 1,4"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Curl ping endpoint
+        run: curl -s https://booking.miljoet.dk/api/ping
+
+      
+
